@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>属性</title>
+</head>
+<body>
+    <!-- 
+        1. attr() 
+        方法描述：专门操作属性值为非布尔值的属性，该方法读写一体。
+    -->
+    <!-- 设置p标签的title属性为”我是attr修改后的段落标题“ -->
+    <p id="content" title="我是段落标题">我是段落</p>
+    <hr>
+
+    <!--
+        2. prop() 
+        方法描述：专门操作属性值为布尔值的属性，该方法读写一体。
+    -->
+    <!-- 需求描述：设置复选框的状态为选中状态 -->
+    <input type="checkbox">复选框
+    <hr>
+
+    <!--
+        val() 
+        方法描述：该方法主要用于获取表单元素的值和设置表单元素的值，该方法读写一体。
+    -->
+    <!-- 设置文本框的值为”123456“ -->
+    <input type="text">
+
+
+    <script src="../../../js/jquery-3.6.1.js"></script>
+    <script>
+        // 1.
+        $('#content').attr('title', '我是attr修改后的段落标题')
+        // 读取p标签的title属性并输出
+        console.log($('#content').attr('title'))
+
+        // 2.
+        $(':checkbox').prop('checked', 'true')
+        // 读取复选框的选中状态并输出
+        console.log($(':checkbox').prop('checked'))
+
+        // 3.
+        $(':text').val('123456')
+        // 读取文本框的值并输出
+        console.log($(':text').val())
+    </script>
+</body>
+</html>

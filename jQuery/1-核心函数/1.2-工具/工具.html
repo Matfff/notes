@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工具</title>
+</head>
+
+<body>
+
+    <script src="../../../js/jquery-3.6.1.js"></script>
+    <script>
+        // 1. $.each方法
+        // 方法描述：一个通用的迭代函数，它可以用来无缝迭代对象和数组。数组和类似数组的对象通过一个长度属性（如一个函数的参数对象）来迭代数字索引，从0到length - 1，其他对象通过其属性名进行迭代。
+        // 给定一个数组，使用$.each方法进行遍历输出
+        var arr = [10, 90, 20, 80, 30, 70, 40, 60, 50];
+        $.each(arr, function (index, element) {
+            console.log(index, element)
+        })
+
+        // 给定一个对象，使用$.each方法进行遍历输出
+        var obj = {
+            name: 'Tom',
+            age: 28,
+            speak: function () { }
+        };
+        $.each(obj, function (key, value) {
+            console.log(key, value)
+        })
+
+        // 2.$.trim方法
+        // 方法描述：去掉字符串起始和结尾的空格。
+        var str = '    hello    ';
+        console.log($.trim(str));
+
+        // 3.$.type方法
+        // 方法描述：确定JavaScript 对象的类型。
+        var str = '    hello    ';
+        console.log($.type(str));
+
+        // 4.$.isArray方法
+        // 方法描述：用来测试指定对象是否为一个数组。
+        var arr = [10, 90, 20, 80, 30, 70, 40, 60, 50];
+        console.log($.isArray(arr));
+
+        // 5.$.isFunction方法
+        // 方法描述：用来测试指定对象是否为一个函数。
+        var fun = function () {
+            console.log("hello");
+        };
+        console.log($.isFunction(fun));
+    </script>
+</body>
+
+</html>

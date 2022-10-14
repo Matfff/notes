@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>设置CORS响应头实现跨域</title>
+    <style>
+        #result{
+            width: 200px;
+            height: 100px;
+            border: solid 1px pink;
+        }
+    </style>
+</head>
+<body>
+    <button>发送请求</button>
+    <div id="result"></div>
+
+    <script>
+        const btn = document.querySelector('button');
+
+        btn.onclick = function(){
+            const x = new XMLHttpRequest();
+            x.open('GET', 'http://127.0.0.1:8000/cors-server');
+            x.send();
+            x.onreadystatechange = function() {
+                if(x.readyState === 4) {
+                    if(x.status >= 200 && x.status < 300) {
+                        console.log(x.response);
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

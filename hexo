@@ -1,0 +1,6 @@
+hexo init 初始化
+hexo g  生成页面
+hexo s  启动服务
+hexo d  上传
+
+安装hexo-deployer-git自动部署发布工具: npm i hexo-deployer-git --save

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM拷贝</title>
+</head>
+
+<body>
+    <!-- 
+        clone()
+        方法描述：创建一个匹配的元素集合的深度拷贝副本。如果传入一个true，则表示是否会复制元素上的事件处理函数，从jQuery 1.4开始，元素数据也会被复制。
+     -->
+    <!-- 为ul列表创建一个深克隆并追加到body后 -->
+    <ul>
+        <li>列表项1</li>
+        <li>列表项2</li>
+        <li>列表项3</li>
+    </ul>
+
+
+    <script src="../../../../js/jquery-3.6.1.js"></script>
+    <script>
+        var ul = $('ul').clone();
+        $('body').append(ul)
+    </script>
+</body>
+
+</html>

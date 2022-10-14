@@ -1,0 +1,6 @@
+# 阿里巴巴矢量图标一次性加入购物车  控制台输入
+
+var iconList = document.querySelectorAll('.icon-gouwuche1');
+for (var i = 0; i < iconList.length; i++) {
+iconList[i].click();
+}

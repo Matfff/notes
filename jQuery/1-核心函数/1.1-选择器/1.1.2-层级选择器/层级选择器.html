@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>层级选择器</title>
+</head>
+
+<body>
+    <!-- 1.子代选择器
+        选择ul下的所有span子元素，设置其背景为红色
+     -->
+    <ul>
+        <span>我是ul的span1</span>
+        <li>我是li1 <span>我是li1的span1</span></li>
+        <li>我是li2 <span>我是li2的span2</span></li>
+        <li>我是li3 <span>我是li3的span3</span></li>
+        <span>我是ul的span2</span>
+    </ul>
+    <hr>
+
+    <!-- 2.后代选择器
+        择ul下的所有i元素，设置其背景为粉色
+     -->
+    <ul>
+        <i>我是ul的i1</i>
+        <li>我是li1 <i>我是li1的i1</i></li>
+        <li>我是li2 <i>我是li2的i2</i></li>
+        <li>我是li3 <i>我是li3的i3</i></li>
+        <i>我是ul的i2</i>
+    </ul>
+    <hr>
+
+    <!-- 3.兄弟选择器
+        选中id为box的下一个兄弟li，设置其背景为红色
+     -->
+    <ul>
+        <li>我是li1</li>
+        <li id="box">我是li2</li>
+        <li>我是li3 <em>我是em</em></li>
+        <li>我是li4</li>
+    </ul>
+    <hr>
+    <!-- 选中id为box2的后边的兄弟li，设置其背景为红色 -->
+    <ul>
+        <li>我是li1</li>
+        <li id="box2">我是li2</li>
+        <li>我是li3 <em>我是em</em></li>
+        <li>我是li4</li>
+    </ul>
+
+
+    <script src="../../../../js/jquery-3.6.1.js"></script>
+    <script>
+        // 1.
+        $('ul>span').css('background', 'red')
+
+        // 2.
+        $('ul i').css('background', 'pink')
+
+        // 3.
+        $('#box+li').css('background', 'red')
+        // 
+        $('#box2~li').css('background', 'red')
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+# 全局配置用户信息
+git config --global user.name "用户名"
+git config --global user.email "邮箱"
+
+# 查看所有的全局配置项
+git config --list --global
+
+# 查看指定的全局配置项
+git config user.name
+git config user.email
+
+# 获取帮助信息 使用 git help <verb> 命令，无需联网，在浏览器中打开帮助手册 例：
+git help config
+# 用 -h 选项获得更简明的"help"输出
+git config -h
+
+# 本地目录初始化git仓库
+git init
+
+# 看文件状态
+git status
+git status -s
+
+# 使用 git add 开始跟踪一个文件
+git add 文件名
+
+git add 是多功能命令：
+（1）可以用它跟踪新文件
+（2）把已跟踪的、且已修改的文件放到暂存区
+（3）把有冲突的文件标记为已解决状态
+
+# git commit 命令进行提交， 其中 -m 选项是本次的提交信息，可对提交的内容做进一步的描述
+git commit -m "...描述"
+
+
+# 撤销对文件的修改：把工作区中对应的文件还原成Git仓库中所保存的版本。 本质：用git仓库保存的文件覆盖工作区文件
+# 所有的修改会丢失，且无法复原！！！
+git checkout -- 文件名
+
+# 一次性将所有新增和修改的文件加入暂存区
+git add .
+
+# 从暂存区中移除对应文件 
+git reset HEAD 需要移除的文件名
+# 从暂存区中移除所有文件
+git reset HEAD .
+
+
+# git标准工作流程 工作区 -> 暂存区 -> Git仓库
+# 跳过使用暂存区： 给 git commit 加上 -a ，git就会自动把所有已跟踪过的文件暂存起来一并提交，跳过 git add 步骤
+git commit -a -m "描述信息"
+
+# 移除文件
+# 从git仓库和工作区中同时移除对应文件
+git rm -f 文件名
+# 只从git仓库中移除对应文件，但保留工作区中的文件
+git rm --cached 文件名
+
+
+# 忽略文件， 无需纳入git管理也不需要出现在未跟踪文件列表。 
+# 创建一个名为 .gitignore 的配置文件，列出要忽略的文件的匹配模式
+文件.gitignore的格式规范如下：
+（1）以#开头的是注释
+（2）以/结尾的是目录
+（3）以/开头防止递归
+（4）以!开头表示取反
+（5）可以使用glob模式进行文件和文件夹的匹配（glob指简化了的正则表达式）
+
+glob模式
+（1）星号 *       匹配零个或多个任意字符
+（2）[abc]        匹配任何一个列在方括号中的字符 （匹配一个a或者一个b或者一个C）
+（3）问号 ?       只匹配一个任意字符
+（4）在方括号中使用短划线分割两个字符，表示所有在这两个字符范围内的都可以匹配（比如[0-9]表示匹配所有0到9的数字）
+（5）两个星号 **  表示匹配任意中间目录（比如 a/**/z 可以匹配 a/z 、 a/b/z 或 a/b/c/z 等）
+
+# 查看提交历史
+
+# 按照时间先后列出所有的提交历史，最近的在最上面
+git log
+
+# 只展示最新的两条提交历史，
+git log -2
+
+# 在一行上展示最近提交历史的信息
+git log -2 --pretty=oneline
+
+# 处于旧版本中， 使用 git reflog --pretty=oneline 命令， 查看所有历史版本
+
+# 在一行上展示最近两条提交历史的信息，并自定义输出格式
+# %h 提交的简写哈希值  %an作者名字  %ar作者修订日期，按多久以前的方式显示  %s提交说明
+git log -2 --pretty=format:"%h | %an | %ar | %s"
+
+# 回退或者跳转到指定版本
+git reset --hard <CommitID>
+
+# 生成 GitHub ssh
+ssh-keygen -t rsa -b 4096 -C "创建使用的github邮箱"
+
+# 检查Github 的 ssh key 是否配置成功
+ssh -T git@github.com
+
+
+# 将远程仓库克隆到本地
+git clone 远程仓库地址
+
+
+# 查看分支列表, * 表示当前所处分支
+git branch
+
+# 创建新分支， 新分支是基础当前所处分支创建的
+git branch 分支名称
+
+# 切换分支
+git checkout 分支名称
+
+# 分支的快速创建和切换， 创建新分支并立即切换到新分支上
+# -b 表示创建一个新分支
+# checkout 表示切换到刚创建的分支上
+git checkout -b 分支名称
+
+# 合并分支
+# 例：在 master 分支上运行 git marge 命令，将 test1 分支的代码合并到 master 分支
+git marge test1
+
+# 删除本地分支
+git branch -d 分支名称
+
+# 强制删除本地分支(未合并)
+git branch -D 分支名称
+
+# 遇到冲突时的分支合并
+手动解决冲突文件后， 执行 git add -> git commit -m "解决了冲突"
+
+# 远程仓库默认名称一般为 origin
+# 将本地分支推送到远程分支
+# -u 表示把本地分支和远程分支进行关联， 只在第一次推送的时候需要带 -u 参数
+git push -u 远程仓库名称 本地分支名称:远程分支名称
+# 两个分支名称一致时可以简写
+git push -u 远程仓库的别名 分支名称
+
+# 查看远程仓库所有分支列表
+git remote show 远程分支名称
+
+# 跟踪分支： 从远程仓库中，把远程分支下载到本地仓库中
+git checkout 远程分支名称
+
+# 把下载的远程分支重命名
+git checkout -b 在本地分支的名称 远程仓库名称/远程分支名称
+
+# 拉取远程分支的最新代码
+git pull
+
+# 删除远程仓库分支
+git push 远程仓库名称 --delete 远程分支名称
+

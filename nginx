@@ -1,0 +1,27 @@
+yum安装nginx
+
+nginx的默认目录可以通过以下命令查看
+// 查看nginx相关目录
+ whereis nginx
+
+// 查看所有nginx目录和文件列表
+rpm -ql nginx
+
+nginx默认路径说明
+
+1. nginx配置文件目录：/etc/nginx/ 
+2. PID目录：/var/run/nginx.pid 
+3. 错误日志：/var/log/nginx/error.log 
+4. 访问日志：/var/log/nginx/access.log 
+5. 默认站点目录：/usr/share/nginx/html
+6. 主配置文件路径：/etc/nginx/nginx.conf
+7. nginx的手册和帮助文件：/usr/share/
+8. nginx服务启动管理的终端命令：/usr/sbin/nginx
+9. ngxin-debug主要用于nginx 启动 debug 模式的一个命令：/usr/sbin/nginx-debug
+10. nginx 模块目录：/usr/lib64/nginx/modules/ 
+
+nginx常用命令
+ nginx 或 systemctl start nginx	 // 启动nginx
+ nginx -s reload         		 // 重新加载配置文件
+ nginx -s stop            		 // 退出
+ nginx -v						 // 查看nginx版本

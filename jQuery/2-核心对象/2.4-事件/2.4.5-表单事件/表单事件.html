@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单事件</title>
+</head>
+<body>
+    <input type="text">
+
+    <script src="../../../../js/jquery-3.6.1.js"></script>
+    <script>
+        // 1. focus()
+        // 方法描述：当获取焦点时触发所绑定的函数。
+        // 当文本框获取焦点时，设置其背景为红色
+        $(':text').focus(function() {
+            $(this).css('background', 'red');
+        });
+
+        // 2. blur()
+        // 方法描述：当失去焦点时触发所绑定的函数。
+        $(':text').blur(function() {
+            $(this).css('background', '');
+        });
+
+        // 3. change()
+        // 方法描述：当内容改变时触发所绑定的函数。
+        $(':text').change(function() {
+            console.log($(this).val())
+        })
+
+        // 4. select()
+        // 方法描述：当内容被选择时触发所绑定的函数。
+        // 当文本框的内容被选择时，就向控制台输出当前文本框的内容
+        $(':text').select(function() {
+            console.log($(this).val())
+        })
+
+        // 5. submit()
+        // 方法描述：当表单提交时触发所绑定的函数。
+    </script>
+</body>
+</html>

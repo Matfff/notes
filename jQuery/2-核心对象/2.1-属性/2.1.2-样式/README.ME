@@ -1,0 +1,5 @@
+css()
+addClass()
+removeClass()
+hasClass()
+toggleClass()

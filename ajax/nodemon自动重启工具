@@ -1,0 +1,3 @@
+安装：npm install -g nodemon
+
+权限被禁止， 在window管理员命令窗口输入命令：set-ExecutionPolicy RemoteSigned

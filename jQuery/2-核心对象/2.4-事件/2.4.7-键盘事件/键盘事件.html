@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>键盘事件</title>
+</head>
+
+<body>
+    <input type="text">
+
+    <script src="../../../../js/jquery-3.6.1.js"></script>
+    <script>
+        // 1. keydown()
+        // 方法描述：当键盘按键按下的时候调用绑定的函数。
+        // 需求描述：当键盘按键按下的时候，输出当前的按键
+        $(':text').keydown(function(event) {
+            console.log(event.key);
+        });
+
+        // 2. keyup()
+        // 方法描述：当键盘按键松开的时候调用绑定的函数。
+        $(':text').keyup(function(e) {
+            console.log(e.key);
+        });
+
+        // 3. keypress()
+        // 方法描述：keypress与keydown类似，当键盘按键按下的时候调用绑定的函数。
+        
+    </script>
+</body>
+
+</html>

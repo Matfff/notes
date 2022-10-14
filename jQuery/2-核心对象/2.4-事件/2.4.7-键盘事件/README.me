@@ -1,0 +1,3 @@
+keydown()
+keyup()
+keypress()

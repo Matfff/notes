@@ -1,0 +1,5 @@
+first()
+last()
+eq()
+not()
+filter()

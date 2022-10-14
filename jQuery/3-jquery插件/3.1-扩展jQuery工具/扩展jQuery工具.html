@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>扩展jQuery工具</title>
+</head>
+
+<body>
+
+    <script src="../../../js/jquery-3.6.1.js"></script>
+    <script>
+        // 扩展jQuery工具的方法
+        $.extend({
+            min: function (a, b) {
+                return a < b ? a : b
+            },
+            max: function (a, b) {
+                return a > b ? a : b
+            },
+            leftTrim: function (str) {
+                return str.replace(/^\s+/, '')
+            },
+            rightTrim: function (str) {
+                return str.replace(/\s+$/, '')
+            }
+        });
+
+        // 
+        // 测试扩展jQuery工具的方法
+        console.log($.min(3, 5));
+        console.log($.max(3, 5));
+        console.log('-----' + $.leftTrim('     hello     ') + '-----');
+        console.log('-----' + $.rightTrim('     hello     ') + '-----');
+    </script>
+</body>
+
+</html>

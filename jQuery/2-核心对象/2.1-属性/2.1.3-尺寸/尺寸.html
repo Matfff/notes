@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>尺寸</title>
+    <style>
+        .box {
+            margin: 30px;
+            padding: 20px;
+            border: 10px;
+            width: 100px;
+            height: 100px;
+            background: coral;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+
+
+    <script src="../../../js/jquery-3.6.1.js"></script>
+    <script>
+        // width()
+        // 方法描述：获取内容元素width的值。
+
+        // height()
+        // 方法描述：获取内容元素height的值。
+
+        // innerWidth()
+        // 方法描述：获取内容元素width + padding的值。
+
+        // innerHeight()
+        // 方法描述：获取内容元素height + padding的值。
+
+        // outerWidth()
+        // 方法描述：outerWidth(false / true)，获取内容元素width + padding + border的值，如果是true再加上margin的值。
+
+        // outerHeight()
+        // 方法描述：outerHeight(false / true)，获取内容元素height + padding + border的值，如果是true再加上margin的值。
+
+        var $box = $('.box');
+        console.log($box.width(), $box.height());// 100 100
+        console.log($box.innerWidth(), $box.innerHeight());// 140 140
+        console.log($box.outerWidth(), $box.outerHeight());// 160 160
+        console.log($box.outerWidth(true), $box.outerHeight(true));// 220 220
+    </script>
+</body>
+
+</html>
