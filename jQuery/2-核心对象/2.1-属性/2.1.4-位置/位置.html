@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>位置</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: coral;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+
+    <script src="../../../js/jquery-3.6.1.js"></script>
+    <script>
+        // offset()
+        // 方法描述：相对页面左上角的坐标。
+        // 获取div相对页面左上角的坐标
+        var offset = $('.box').offset();
+        console.log(offset.left, offset.top);
+
+        // position()
+        // 方法描述：相对于父元素左上角的坐标。
+
+        // scrollLeft()
+        // 方法描述：读取/设置滚动条的X坐标，该方法读写合一。
+        $('body').css({
+            'height': '2000px',
+            'width': '2000px'
+        });
+        var scrollLeft = $(document.body).scrollLeft()+$(document.documentElement).scrollLeft();
+        $('body,html').scrollLeft(60);
+        $('html,body').scrollLeft(300);
+
+        // scrollTop()
+        // 方法描述：读取/设置滚动条的Y坐标，该方法读写合一。
+        var scrollTop = $(document.body).scrollTop()+$(document.documentElement).scrollTop();
+        $('body,html').scrollTop(60);
+        $('html,body').scrollTop(300);
+    </script>
+</body>
+
+</html>

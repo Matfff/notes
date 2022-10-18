@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>渐变</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background: coral;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="fadein">淡入</button>
+    <button class="fadeout">淡出</button>
+    <button class="fadeToggle">淡入淡出</button>
+    <div class="box"></div>
+
+
+    <script src="../../../../js/jquery-3.6.1.js"></script>
+    <script>
+        // 1. fadeIn()
+        // 方法描述：通过淡入的方式显示匹配元素。
+        // 需求描述：创建一个按钮，控制div缓慢淡入
+        $('.fadein').click(function () {
+            $('.box').fadeIn('slow');
+        });
+
+        // 2. fadeOut()
+        // 方法描述：通过淡出的方式隐藏匹配元素。
+        $('.fadeout').click(function () {
+            $('.box').fadeOut('fast');
+        });
+
+        // 3. fadeToggle()
+        // 方法描述：用淡入淡出动画显示或隐藏一个匹配元素。
+        $('.fadeToggle').click(function () {
+            $('.box').fadeToggle('slow');
+        });
+
+    </script>
+</body>
+
+</html>

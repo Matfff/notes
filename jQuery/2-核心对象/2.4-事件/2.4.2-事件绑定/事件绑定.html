@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件绑定</title>
+</head>
+<body>
+    <button>按钮</button>
+    
+    <script src="../../../../js/jquery-3.6.1.js"></script>
+    <script>
+        // 1. on()
+        // 方法描述：在选定的元素上绑定一个或多个事件处理函数。
+        // 为按钮添加单击事件，当按钮单击的时候，向控制台输出“按钮被单击了”
+        $('button').on('click', function() {
+            console.log('按钮被单击了');
+        });
+
+        // 2. off()
+        // 方法描述： 移除一个事件处理函数。
+        $('button').off('click');
+    </script>
+</body>
+</html>

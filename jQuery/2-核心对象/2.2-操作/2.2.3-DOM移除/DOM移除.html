@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM移除</title>
+</head>
+
+<body>
+    <!-- 
+        1. empty()
+        方法描述：删除所有匹配元素的子元素。
+     -->
+    <!-- 将ul列表下所有的子节点全部移除 -->
+    <ul class="empty">
+        <li>列表项1</li>
+        <p>我是段落1</p>
+        <li>列表项2</li>
+        <p>我是段落2</p>
+        <li>列表项3</li>
+    </ul>
+
+    <!-- 
+        2. remove()
+        方法描述：删除所有匹配的元素。
+     -->
+    <!-- 将ul列表下所有的p子节点全部移除 -->
+    <ul>
+        <li>列表项1</li>
+        <p>我是段落1</p>
+        <li>列表项2</li>
+        <p>我是段落2</p>
+        <li>列表项3</li>
+    </ul>
+
+    <script src="../../../../js/jquery-3.6.1.js"></script>
+    <script>
+        // 1. 
+        $('.empty').empty()
+
+        // 2.
+        $('ul>p').remove()
+    </script>
+</body>
+
+</html>

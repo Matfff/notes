@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>扩展jQuery对象</title>
+</head>
+
+<body>
+    <input type="checkbox" name="items" value="足球" />足球
+    <input type="checkbox" name="items" value="篮球" />篮球
+    <input type="checkbox" name="items" value="羽毛球" />羽毛球
+    <input type="checkbox" name="items" value="乒乓球" />乒乓球
+    <br />
+    <input type="button" id="checkedAllBtn" value="全 选" />
+    <input type="button" id="checkedNoBtn" value="全不选" />
+    <input type="button" id="reverseCheckedBtn" value="全反选" />
+
+
+    <script src="../../../js/jquery-3.6.1.js"></script>
+    <script>
+        // 扩展jQuery对象的方法
+        $.fn.extend({
+            checkAll: function () {
+                this.prop('checked', true);
+            },
+            unCheckAll: function () {
+                this.prop('checked', false);
+            },
+            reverseCheck: function () {
+                this.each(function () {
+                    this.checked = !this.checked;
+                });
+            }
+        });
+
+        // 测试扩展jQuery对象的方法
+        var $items = $(':checkbox[name=items]');
+        $('#checkedAllBtn').click(function () {
+            $items.checkAll();
+        });
+        $('#checkedNoBtn').click(function () {
+            $items.unCheckAll();
+        });
+        $('#reverseCheckedBtn').click(function () {
+            $items.reverseCheck();
+        });
+
+    </script>
+</body>
+
+</html>

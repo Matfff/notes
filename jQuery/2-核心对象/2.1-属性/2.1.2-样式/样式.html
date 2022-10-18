@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>样式</title>
+    <style>
+        .beauty {
+            font-weight: bold;
+            font-size: 18px;
+            color: pink;
+        }
+
+        .hide {
+            width: 100px;
+            height: 100px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        1. css()
+        方法描述：获取匹配元素集合中的第一个元素的样式属性的计算值或设置每个匹配元素的一个或多个CSS属性。
+     -->
+    <!-- 设置div的背景颜色为红色，字体颜色为白色 -->
+    <div class="div1">我是div1</div>
+    <hr>
+
+    <!-- 
+        2. addClass()
+        方法描述：为每个匹配的元素添加指定的样式类名。
+     -->
+    <!-- 为所有的li添加样式”beauty“ -->
+    <ul>
+        <li>列表项1</li>
+        <li>列表项2</li>
+        <li>列表项3</li>
+        <li>列表项4</li>
+    </ul>
+    <hr>
+
+    <!-- 
+        3. removeClass()
+        方法描述：移除集合中每个匹配元素上一个，多个或全部样式。
+     -->
+    <!-- 需求描述：为所有的li移除样式”beauty“ -->
+
+
+    <!-- 
+        4. hasClass()
+        方法描述：确定任何一个匹配元素是否有被分配给定的样式类。
+     -->
+    <!-- 需求描述：判断p标签是否包含”beauty“的样式 -->
+    <p class="beauty"></p>
+
+    <!-- 
+        5. toggleClass()
+        方法描述：为匹配的元素集合中的每个元素上添加或删除一个或多个样式类，取决于这个样式类是否存在。
+        如果存在（不存在）就删除（添加）一个样式类
+     -->
+    <!-- 当单击按钮的时候，隐藏div，再次单击按钮的时候，显示div -->
+    <button>按钮</button>
+    <div>我是div</div>
+
+
+    <script src="../../../js/jquery-3.6.1.js"></script>
+    <script>
+        // 1.
+        $('.div1').css({
+            'background': 'red',
+            'color': 'white'
+        })
+        // 获取div的字体颜色并输出
+        console.log($('.div1').css('color'))
+
+        // 2.
+        $('li').addClass('beauty')
+
+        // 3.
+        $('li').removeClass('beauty')
+
+        // 4.
+        console.log($('p').hasClass('beauty'))
+
+        // 5.
+        $('button').click(function() {
+            $('div').toggleClass('hide')
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM替换</title>
+</head>
+
+<body>
+    <!-- 
+        1. replaceWith()
+        方法介绍：用提供的内容替换集合中所有匹配的元素并且返回被删除元素的集合。
+     -->
+    <!-- 将ul下的所有li替换为p标签 -->
+    <ul class="replaceWith">
+        <li>列表项1</li>
+        <li>列表项2</li>
+        <li>列表项3</li>
+    </ul>
+
+    <!-- 
+        2. replaceAll()
+        方法介绍：.replaceAll()和.replaceWith()功能类似，但是目标和源相反。
+     -->
+    <!-- 将ul下的所有li替换为p标签 -->
+    <ul class="replaceAll">
+        <li>列表项1</li>
+        <li>列表项2</li>
+        <li>列表项3</li>
+    </ul>
+
+    <script src="../../../../js/jquery-3.6.1.js"></script>
+    <script>
+        // 1.
+        $('.replaceWith>li').replaceWith('<p>我是段落</p>');
+
+        // 2.
+        $('<p>我是段落2</p>').replaceAll($('.replaceAll>li'))
+    </script>
+</body>
+
+</html>

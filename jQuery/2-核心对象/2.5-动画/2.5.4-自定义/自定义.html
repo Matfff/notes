@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自定义</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: black;
+        }
+    </style>
+</head>
+
+<body>
+    <button>自定义动画</button>
+    <div class="box"></div>
+
+
+    <script src="../../../../js/jquery-3.6.1.js"></script>
+    <script>
+
+        // 1. animate()
+        // 方法描述：根据一组 CSS 属性，执行自定义动画，并且支持链式调用。
+        // 创建一个div，默认div宽高100px，背景颜色为黑色，先让div宽度变为200px，再让div高度变为200px
+        // 这里有两个动画
+        $('.box').animate({
+            width: '200'
+        }).animate({
+            height: '200'
+        });
+
+        // 2. stop()
+        // 方法描述：停止匹配元素当前正在运行的动画。
+        // 接收两个参数，都是布尔值，默认值都是false
+        // 第一个参数：是否清空当前动画队列。
+        // 第二个参数：是否立即完成当前动画。
+
+        $('.box').stop(false, false); // 等价方式stop(), 表示立即进入下一个动画，立即停止当前动画。
+
+        // stop(false，false)等价方式stop()表示立即进入下一个动画，立即停止当前动画。
+        // stop(false，true)表示立即进入下一个动画，立即停止并完成当前动画。
+        // stop(true，true)表示清空当前动画队列，立即停止并完成当前动画。
+        // stop(true，false)等价方式stop(true)表示清空当前动画队列，立即停止当前动画。
+
+    </script>
+</body>
+
+</html>
