@@ -1,0 +1,1 @@
+xiaohong=99 xiaobai=100 xiaohuang=70 xiaohei=66 xiaolv=88
