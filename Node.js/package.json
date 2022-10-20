@@ -1,5 +1,11 @@
 {
   "dependencies": {
-    "moment": "^2.29.4"
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-jwt": "^7.7.5",
+    "express-session": "^1.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.4",
+    "mysql": "^2.18.1"
   }
 }
