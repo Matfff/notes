@@ -29,8 +29,8 @@ npm install webpack@5.42.1 webpack-cli@4.7.2 -D
 
 
 # loader:  
-npm i style-loader@3.0.0 css-loader@5.2.6 -D  
-npm i less-loader@10.0.1 less@4.1.1 -D  
+    npm i style-loader@3.0.0 css-loader@5.2.6 -D  
+    npm i less-loader@10.0.1 less@4.1.1 -D  
 在实际开发过程中，webpack默认只能打包处理以.js后缀名结尾的模块，其他非.js后缀名结尾的模块，webpack默认处理不了，需要调用 loader 加载器才可以正常打包，否则会报错，比如：
 1. css-loader 可以打包处理.css相关的文件
 2. less-loader 可以打包处理.less相关的文件
