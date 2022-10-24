@@ -69,7 +69,7 @@ clean-webpack-plugin 插件  `npm i clean-webpack-plugin -D`
 
 # Source Map
 一个信息文件，里面存储着位置信息。\
-也就是说，Source Map 文件中存储着压缩混淆后的代码所对应的转换前的位置信息。\ 
+也就是说，Source Map 文件中存储着压缩混淆后的代码所对应的转换前的位置信息。\
 出错的时候，除错工具将直接显示原始代码，而不是转换后的代码，方便后期调试。\
 开发环境下， 在 webpack.config.js 中添加：  `devtool: 'eval-source-map'`\
 生产环境下， 为了安全性考虑，建议关闭 Source Map ，或者：\
