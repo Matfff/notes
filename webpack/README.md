@@ -5,19 +5,19 @@ webpack是前端项目工程化的具体解决方案\
 主要功能：提供了友好的前端模块化开发支持，以及代码压缩混淆、处理浏览器端js的兼容性、性能优化等功能。
 
 # 安装 webpack
-`npm install webpack@5.42.1 webpack-cli@4.7.2 -D`\
+`npm install webpack@5.42.1 webpack-cli@4.7.2 -D`
 1. 在项目根目录中创建 webpack.config.js 的 webpack 配置文件，并初始化
 2. 在 package.json 的 scripts 节点下，新增 dev 脚本
     scripts 节点下的脚本，可以通过 npm run 执行
 3. 终端运行 npm run dev 命令，启动 webpack 进行项目打包构建
 
 # webpack 中的默认约定
-在 webpack 4.x 和 5.x 的版本中，有如下的默认约定:\ 
+在 webpack 4.x 和 5.x 的版本中，有如下的默认约定:
 1. 默认的打包入口文件为 src -> idnex.js
 2. 默认的输出文件路径为 dist -> main.js
 
 可以在 webpack.config.js 中修改打包的默认约定\
-通过 entry 节点指定打包的入口。通过 output 节点指定打包出口\
+通过 entry 节点指定打包的入口。通过 output 节点指定打包出口
 
 # 常用的webpack插件：
 1. webpack-dev-server
