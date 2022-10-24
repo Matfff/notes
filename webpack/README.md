@@ -41,11 +41,11 @@ webpack是前端项目工程化的具体解决方案\
 # 配置 url-loader
 打包处理样式表中与url路径相关的文件:\
 `npm i url-loader@4.1.1 file-loader@6.2.0 -D`\
-`{ test: /\.jpg|png|gif$/, use: 'url-loader?limit=22229&outputPath=images' }`
+`{ test: /\.jpg|png|gif$/, use: 'url-loader?limit=22229&outputPath=images' }`\
 其中 ? 之后是 loader 的参数项:\
-  limit 用来指定图片的大小，单位是字节（byte）\
-  --只有 <= limit 大小的图片，才会被转为 base64 格式的图片\
-  --在配置 url-loader 时，多个参数使用 & 分割，outputPath=images 表示打包的图片文件放在 dist/images 目录下
+limit 用来指定图片的大小，单位是字节（byte）\
+只有 <= limit 大小的图片，才会被转为 base64 格式的图片\
+在配置 url-loader 时，多个参数使用 & 分割，outputPath=images 表示打包的图片文件放在 dist/images 目录下
 
 
 # 配置 babel-loader
