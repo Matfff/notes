@@ -51,7 +51,7 @@ limit 用来指定图片的大小，单位是字节（byte）\
 # 配置 babel-loader
 `npm i babel-loader@8.2.2 @babel/core@7.14.6 @babel/plugin-proposal-decorators@7.14.5 -D`\
 `{ test: /\.js$/, use: 'babel-loader', exclude: /node_modules/ }`\
-必须使用 exclude 指定排除项：因为 node_modules 目录下的第三方包不需要被打包\
+必须使用 exclude 指定排除项：因为 node_modules 目录下的第三方包不需要被打包
 
 在根目录下。创建名为 babel.config.js 的配置文件，定义 Babel 的配置项\
 官方文档：https://babeljs.io/docs/en/
@@ -64,8 +64,7 @@ production 代表生成模式，会对打包生成的文件进行代码压缩和
 
 
 # 每次打包发布自动清理dist目录下的旧文件
-clean-webpack-plugin 插件  `npm i clean-webpack-plugin -D`\ 
-
+clean-webpack-plugin 插件  `npm i clean-webpack-plugin -D`\
 
 
 # Source Map
