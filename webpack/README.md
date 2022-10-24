@@ -21,16 +21,16 @@ npm install webpack@5.42.1 webpack-cli@4.7.2 -D
 通过 entry 节点指定打包的入口。通过 output 节点指定打包出口  
 
 # 常用的webpack插件：
-1. webpack-dev-server
+1. webpack-dev-server  
     类似与nodemon工具，每当修改了源代码，webpack会自动进行项目的打包和构建
-2. html-webpack-plugin
+2. html-webpack-plugin  
     webpack中的一个html插件（类似于一个模板引擎插件）
     可以通过此插件自定制index.html页面内容
 
 
 # loader:  
-npm i style-loader@3.0.0 css-loader@5.2.6 -D
-npm i less-loader@10.0.1 less@4.1.1 -D
+npm i style-loader@3.0.0 css-loader@5.2.6 -D  
+npm i less-loader@10.0.1 less@4.1.1 -D  
 在实际开发过程中，webpack默认只能打包处理以.js后缀名结尾的模块，其他非.js后缀名结尾的模块，webpack默认处理不了，需要调用 loader 加载器才可以正常打包，否则会报错，比如：
 1. css-loader 可以打包处理.css相关的文件
 2. less-loader 可以打包处理.less相关的文件
