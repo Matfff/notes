@@ -49,29 +49,29 @@ npm i less-loader@10.0.1 less@4.1.1 -D
 
 
 # 配置 babel-loader
-npm i babel-loader@8.2.2 @babel/core@7.14.6 @babel/plugin-proposal-decorators@7.14.5 -D
-{ test: /\.js$/, use: 'babel-loader', exclude: /node_modules/ }
-必须使用 exclude 指定排除项：因为 node_modules 目录下的第三方包不需要被打包
+npm i babel-loader@8.2.2 @babel/core@7.14.6 @babel/plugin-proposal-decorators@7.14.5 -D  
+{ test: /\.js$/, use: 'babel-loader', exclude: /node_modules/ }  
+必须使用 exclude 指定排除项：因为 node_modules 目录下的第三方包不需要被打包  
 
-在根目录下。创建名为 babel.config.js 的配置文件，定义 Babel 的配置项
-官方文档：https://babeljs.io/docs/en/
+在根目录下。创建名为 babel.config.js 的配置文件，定义 Babel 的配置项  
+官方文档：https://babeljs.io/docs/en/  
 
 # 配置 webpack 的打包发布
-在 package.json 文件的 scripts 节点下， 新增  "build": "webpack --mode production" ， 项目发布时，运行 build 命令
---model 是一个参数项，用来指定 webpack 的运行模式。
-production 代表生成模式，会对打包生成的文件进行代码压缩和性能优化
-注意： 通过 --model 指定的参数项，会覆盖 webpack.config.js 中的 model 选项。
+在 package.json 文件的 scripts 节点下， 新增  "build": "webpack --mode production" ， 项目发布时，运行 build 命令  
+--model 是一个参数项，用来指定 webpack 的运行模式。  
+production 代表生成模式，会对打包生成的文件进行代码压缩和性能优化  
+注意： 通过 --model 指定的参数项，会覆盖 webpack.config.js 中的 model 选项。  
 
 
 # 每次打包发布自动清理dist目录下的旧文件
-clean-webpack-plugin 插件   npm i clean-webpack-plugin -D
+clean-webpack-plugin 插件   npm i clean-webpack-plugin -D  
 
 
 
 # Source Map
-一个信息文件，里面存储着位置信息。
-也就是说，Source Map 文件中存储着压缩混淆后的代码所对应的转换前的位置信息。
-出错的时候，除错工具将直接显示原始代码，而不是转换后的代码，方便后期调试。
+一个信息文件，里面存储着位置信息。  
+也就是说，Source Map 文件中存储着压缩混淆后的代码所对应的转换前的位置信息。  
+出错的时候，除错工具将直接显示原始代码，而不是转换后的代码，方便后期调试。  
     开发环境下， 在 webpack.config.js 中添加：  devtool: 'eval-source-map'
     生产环境下， 为了安全性考虑，建议关闭 Source Map ，或者：
         如果只想定位报错的具体行数，不暴露源码:
