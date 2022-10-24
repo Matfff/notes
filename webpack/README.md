@@ -24,7 +24,7 @@ webpack是前端项目工程化的具体解决方案\
     类似与nodemon工具，每当修改了源代码，webpack会自动进行项目的打包和构建
 2. html-webpack-plugin
     webpack中的一个html插件（类似于一个模板引擎插件）\
-    可以通过此插件自定制index.html页面内容\
+    可以通过此插件自定制index.html页面内容
 
 
 # loader:  
@@ -35,7 +35,7 @@ webpack是前端项目工程化的具体解决方案\
 2. less-loader 可以打包处理.less相关的文件
 3. babel-loader 可以打包处理 webpack 无法处理的高级JS语法
 当 webpack 发现某个文件处理不了的时候， 会查找 webpack.config.js 这个配置文件，看 module.rules 数组中，是否配置了对应的 loader加载器。\
-处理好的结果会合并到 /dist/bundle.js 中，生成打包好的文件\
+处理好的结果会合并到 /dist/bundle.js 中，生成打包好的文件
 
 
 # 配置 url-loader
@@ -45,7 +45,7 @@ webpack是前端项目工程化的具体解决方案\
 其中 ? 之后是 loader 的参数项:\
   limit 用来指定图片的大小，单位是字节（byte）\
   --只有 <= limit 大小的图片，才会被转为 base64 格式的图片\
-  --在配置 url-loader 时，多个参数使用 & 分割，outputPath=images 表示打包的图片文件放在 dist/images 目录下\
+  --在配置 url-loader 时，多个参数使用 & 分割，outputPath=images 表示打包的图片文件放在 dist/images 目录下
 
 
 # 配置 babel-loader
@@ -54,13 +54,13 @@ webpack是前端项目工程化的具体解决方案\
 必须使用 exclude 指定排除项：因为 node_modules 目录下的第三方包不需要被打包\
 
 在根目录下。创建名为 babel.config.js 的配置文件，定义 Babel 的配置项\
-官方文档：https://babeljs.io/docs/en/\
+官方文档：https://babeljs.io/docs/en/
 
 # 配置 webpack 的打包发布
 在 package.json 文件的 scripts 节点下， 新增  "build": "webpack --mode production" ， 项目发布时，运行 build 命令\
 --model 是一个参数项，用来指定 webpack 的运行模式。\
 production 代表生成模式，会对打包生成的文件进行代码压缩和性能优化\
-注意： 通过 --model 指定的参数项，会覆盖 webpack.config.js 中的 model 选项。\
+注意： 通过 --model 指定的参数项，会覆盖 webpack.config.js 中的 model 选项。
 
 
 # 每次打包发布自动清理dist目录下的旧文件
