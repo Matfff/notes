@@ -50,8 +50,8 @@ npm install webpack@5.42.1 webpack-cli@4.7.2 -D
 
 
 # 配置 babel-loader
-npm i babel-loader@8.2.2 @babel/core@7.14.6 @babel/plugin-proposal-decorators@7.14.5 -D  
-{ test: /\.js$/, use: 'babel-loader', exclude: /node_modules/ }  
+    npm i babel-loader@8.2.2 @babel/core@7.14.6 @babel/plugin-proposal-decorators@7.14.5 -D  
+    { test: /\.js$/, use: 'babel-loader', exclude: /node_modules/ }  
 必须使用 exclude 指定排除项：因为 node_modules 目录下的第三方包不需要被打包  
 
 在根目录下。创建名为 babel.config.js 的配置文件，定义 Babel 的配置项  
