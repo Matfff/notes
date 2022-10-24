@@ -41,8 +41,8 @@ npm install webpack@5.42.1 webpack-cli@4.7.2 -D
 
 # 配置 url-loader
 打包处理样式表中与url路径相关的文件:  
-    npm i url-loader@4.1.1 file-loader@6.2.0 -D
-    { test: /\.jpg|png|gif$/, use: 'url-loader?limit=22229&outputPath=images' }
+    npm i url-loader@4.1.1 file-loader@6.2.0 -D  
+    { test: /\.jpg|png|gif$/, use: 'url-loader?limit=22229&outputPath=images' }  
 其中 ? 之后是 loader 的参数项:  
   --limit 用来指定图片的大小，单位是字节（byte）
   --只有 <= limit 大小的图片，才会被转为 base64 格式的图片
