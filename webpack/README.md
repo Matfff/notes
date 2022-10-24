@@ -65,7 +65,8 @@ production 代表生成模式，会对打包生成的文件进行代码压缩和
 
 
 # 每次打包发布自动清理dist目录下的旧文件
-clean-webpack-plugin 插件   npm i clean-webpack-plugin -D  
+clean-webpack-plugin 插件  
+    npm i clean-webpack-plugin -D  
 
 
 
