@@ -1,9 +1,6 @@
 ### npm ERR! Could not resolve dependency:npm ERR! peer pug@“^2.0.0“ from pug-loader@2.4.0
-### npm ERR! Could not resolve dependency:npm ERR! peer pug@“^2.0.0” from pug-loader@2.4.0
-  
 ### 报错原因
 在新版本的npm中，默认情况下，npm install遇到冲突的peerDependencies时将失败。
-
 ### 解决办法
 使用–force或–legacy-peer-deps可解决这种情况。  
   
