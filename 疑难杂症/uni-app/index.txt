@@ -1,3 +1,5 @@
+https://blog.csdn.net/nnnooon?spm=1018.2226.3001.5343
+
 1、*************************************************
 小程序开发工具中警示：[代码依赖分析] 找到 1 个依赖异常情况，可能会导致对应文件无法加载，请检查。 Couldn't resolve the Component "custom-tab-bar/index" relative to "/app.json"  如需关闭依赖分析请在 project.config.json setting 字段中增加 "ignoreDevUnusedFiles": false 和 "ignoreUploadUnusedFiles": false
 问题分析：自定义导航栏需命名为custom-tab-bar，且必须位于 pages 同一级别的目录，另外组件也需命名为 index
